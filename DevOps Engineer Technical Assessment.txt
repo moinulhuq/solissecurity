@@ -1,0 +1,90 @@
+DevOps Engineer Technical Assessment
+
+Objective: Setup an infrastructure in Google Cloud Platform (GCP) using Terraform.
+
+Expected Duration: 2 hours
+
+Required Software:
+
+Terraform (v1.0.8 or newer)
+Google Cloud SDK
+
+Assessment Setup:
+
+You need to have a GCP account ready and properly configured for this task. Please ensure that you have appropriate rights to create and manage resources in GCP.
+
+Tasks:
+
+Your task is to create a GCP infrastructure for a sample web application. You should use Terraform scripts for creating the following resources:
+
+Create a Google Compute Engine instance.
+
+1.1. The instance should be of type e2-medium and should use the latest Debian image.
+
+1.2. The instance should be tagged as web.
+
+1.3. The instance should be created in the us-central1 region and us-central1-c zone.
+
+1.4. Write a startup script that installs Nginx on the instance upon boot.
+
+Create a Google Cloud Storage bucket.
+
+2.1. The bucket should be named <yourname>-test-bucket.
+
+2.2. The bucket should be in the us-central1 region.
+
+2.3. The bucket should be set to Multi-Regional storage class.
+
+Create a Google Cloud SQL instance.
+
+3.1. The Cloud SQL instance should be of type db-f1-micro and should run PostgreSQL.
+
+3.2. The Cloud SQL instance should be in the us-central1 region.
+
+3.3. The database instance should be set with a randomly generated password.
+
+Create a Google VPC Network with a subnet.
+
+4.1. The VPC should have auto-create subnets disabled and should create a custom subnet.
+
+4.2. The subnet should be in the us-central1 region and should use the IP range 10.0.0.0/20.
+
+Setup Cloud NAT for the Google VPC Network.
+
+5.1. The Cloud NAT should allow the instances in the subnet to connect to the internet.
+
+Create Firewall rules to allow HTTP and HTTPS traffic.
+
+6.1. Only allow incoming connections on ports 80 and 443 from any IP (0.0.0.0/0) to the tagged instances (web).
+
+Deliverables:
+
+Terraform scripts (.tf files) for setting up the entire infrastructure as described above.
+
+A README.md file explaining:
+
+2.1. The architecture of the infrastructure you set up.
+
+2.2. Instructions on how to run the Terraform scripts.
+
+A screenshot of the GCP dashboard showing the created resources.
+
+A screenshot showing the result of the terraform plan and terraform apply commands.
+
+A document (can be part of README.md) with answers to the following questions:
+
+5.1. Explain how you structured your Terraform scripts and why?
+
+5.2. How would you monitor these created resources?
+
+5.3. If given more time, what improvements or additional features would you add to this infrastructure?
+
+Evaluation Criteria:
+
+Completeness of the tasks.
+Correctness and quality of the Terraform scripts.
+The simplicity and readability of the code.
+The quality of the documentation (README.md and additional document with answers).
+Thought process and the proposed improvements (from the answers document).
+
+Good luck!
